@@ -1,0 +1,11 @@
+header {
+  background-color: black;
+  outline-color: yellow;
+  color: yellow;
+}
+footer {
+  background-color: yellow;
+}
+.hidden {
+  opacity: 0;
+}
