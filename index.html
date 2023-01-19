@@ -36,10 +36,10 @@
           Quiz will cover basics of JS, data structures in JS and modern JS
           features
         </p>
-        <h4>Please fill in your details before the quiz ☺All the Best 👍</h4>
+        <!-- <h4>Please fill in your details before the quiz ☺All the Best 👍</h4> -->
         <!-- <button>Login</button> -->
         <form>
-          <div class="mb-3">
+          <!-- <div class="mb-3">
             <label for="uName" class="form-label">Name:</label>
             <input
               type="text"
@@ -47,8 +47,8 @@
               id="uName"
               aria-describedby="emailHelp"
             />
-          </div>
-          <div class="mb-3">
+          </div> -->
+          <!-- <div class="mb-3">
             <label for="uRole" class="form-label">I am:</label>
             <select class="form-select" aria-label="Default select example">
               <option selected>Select your Designation</option>
@@ -56,12 +56,22 @@
               <option value="2">IT Employee</option>
               <option value="3">Non-IT Employee</option>
             </select>
-          </div>
+          </div> -->
+          <h4>Please Note:</h4>
+          <ol>
+            <li>Currently the users will have to submit each answers separately.</li>
+            <li>Once clicked on Submit, you will not be able to undo your submission</li>
+            <li>Final Result is calculated once you click "Finish", but remember to submit each answers</li>
+          </ol>
+          <h6 class="text-success fw-bold">From Author: Hope I will be able to bring out a better updated version of this one. Consider it as a base model. Thank You. Happy Coding</h6>
           <button type="submit" class="submitB btn btn-primary">Start</button>
         </form>
       </div>
 
       <div class="quiz hidden">
+        <div class="finishQuiz text-center mt-5">
+          <button type="button" class="btnFinish btn btn-danger w-50">Finish</button>
+        </div>
         <h2>1. Select combinations that has block scope</h2>
         <div class="ms-3 mb-5">
           <div class="form-check">
@@ -115,7 +125,9 @@
             </p>
           </div>
         </div>
+        
       </div>
+      
     </main>
 
     <footer class="p-5 mt-5">
