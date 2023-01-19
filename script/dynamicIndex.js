@@ -13,7 +13,7 @@ const quiz = [
   {
     question: `1. Select the correct answer to change color of below paragraph.\n
         <h6 class="fw-bold text-danger">(Read options carefully)</h6>`,
-    screenshot: "./images/snippet1.jpg",
+    screenshot: "./images/snippet1.png",
     choices: [
       `1. document.p.style.color="red";`,
       `2. document.querySelector('#msg').style.color="red";`,
