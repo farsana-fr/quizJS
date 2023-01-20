@@ -23,7 +23,7 @@ const quiz = [
     correct: {
         opt:4,
       head: `4. document.getElementById('para1').style.color="red";`,
-      para: "getElementById is one of the method to select the HTML elements. It received the id name as the arguments, no predecessors required",
+      para: "getElementById is one of the method to select the HTML elements. It receives the id given in Element as argument. The argument does not need a predecessors as in querySelector(), where querySelector needs # to indicate that it is an ID",
     },
   },
   {
@@ -39,7 +39,7 @@ const quiz = [
     correct: {
         opt:2,
       head: "2. Object",
-      para: "Object is declared inside curly braces with key value pair separated by :",
+      para: "Object is declared inside curly braces with key value pair separated by a colon(:)",
     },
   },
   {
@@ -53,7 +53,7 @@ const quiz = [
     correct: {
         opt:4,
       head: "4. const and var:",
-      para: "the variables declared using let or const cannot be accessed before that block.(errors out as varaible is not defined) Whereas var has immediate parent scope and the variables will be accessible from the parent block.",
+      para: "the variables declared using let or const cannot be accessed before that block.(errors out as varaible is not defined). Whereas var declared in a block will be accessible from its immediate parent scope.",
     },
   },
   {
@@ -62,9 +62,9 @@ const quiz = [
     correct: {
         opt:3,
       head: `3. Boolean("false")`,
-      para: `Here false is given as string within double quotes.
-      values like false,0,null,undefined are Falsy Values whereas above 1,true,(4,30)any number are Truthy Values.
-      This feature helps us to validate the variables`,
+      para: `Here false is given as string within double quotes. So it is a string of value false, not a Boolean value false.
+      Values like false,0,null,undefined are Falsy Values whereas 1,true,(4,30)any number,"xyz"(any non empty string) are Truthy Values.
+      This feature can be used as a shortcut for validation`,
     },
   },
   {
@@ -85,7 +85,7 @@ const quiz = [
     correct: {
         opt:2,
       head: `2. fruits.join(" ")`,
-      para: "join() method is used to return a string with the separator mentioned in join method. If there are no separator mentioned, by default the resultant string will have elements separated by comma.\n ",
+      para: `join() method is used to return convert an array to string separated by the separator passed in to join method. If there are no separator mentioned, by default the resultant string will have elements separated by comma. join(" ") separates it with a space as passed in the method.  \n `,
     },
   },
   {
@@ -94,7 +94,7 @@ const quiz = [
     correct: {
         opt:3,
       head: `3. String`,
-      para: "Values from HTML input are always a string, we can convert it to desired type using appropriate JS functions.",
+      para: "Values from HTML input are always a string, we can convert it to desired type using appropriate JS functions when needed.",
     },
   },
   {
@@ -174,7 +174,7 @@ function constrQuiz() {
                 <br>
                 <button type="button" class="checkB checkB--${
                   i + 1
-                } btn btn-primary disabled">Check Answer</button>
+                } btn btn-primary disabled hide">Check Answer</button>
                 <div class=" answer answer--${i + 1} border mt-5 p-4">
                     <h5>${e.correct.head}</h5>
                     <p>
@@ -278,6 +278,7 @@ if(btnSubmit)
 
                         }
                         document.querySelector(`.checkB--${answered}`).classList.remove('disabled');
+                        document.querySelector(`.checkB--${answered}`).classList.remove('hide');
                         //disable the radio buttons
                         
                         [1,2,3,4].forEach(
