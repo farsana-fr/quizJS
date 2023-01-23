@@ -250,7 +250,7 @@ if (btnSubmit) {
     secWelcome.textContent = "";
     secQuiz.classList.remove("hidden");
     secQuiz.innerHTML = constrQuiz();
-    timer.classList.remove("hidden");
+    timer.classList.remove("hide");
     //23-Jan-2023 : Add Timer Starts
     // let quizAllowedTime=10*60*1000;
     let sec = 0;
@@ -270,7 +270,7 @@ if (btnSubmit) {
               .querySelectorAll(`.submitAns`)
               .forEach((e) => e.classList.add("disabled"));
             timer.innerHTML = `<h4 class="text-center p-1">TIMED OUT!!</h4>`;
-            timer.classList.add("hidden");
+            timer.classList.add("hide");
             clearInterval(tim);
           } else if (sec == 0) {
             min--;
@@ -291,7 +291,7 @@ if (btnSubmit) {
       document
         .querySelector(".btnFinish")
         .addEventListener("click", function () {
-          timer.classList.add("hidden");
+          timer.classList.add("hide");
           secQuiz.innerHTML = `
       <div class=" mt-5">
           <h3>You have scored</h3>
