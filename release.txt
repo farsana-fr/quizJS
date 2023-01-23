@@ -1,0 +1,4 @@
+Jan 23
+--------
+* Added few more question and soft coded finding the scores
+* Added Timer of 5 mins for the whole quiz

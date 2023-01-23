@@ -14,3 +14,9 @@ Mostly the JS side was designed as a result of my course - The Udemy course: Com
 
 "Secret to learning is to trust your Instructor"
 - Farsana Rahim, 23-01-2023
+
+## Updates
+
+Jan 23:
+* Added few more question and soft coded finding the scores
+* Added Timer of 5 mins for the whole quiz, which will disable all radio buttons and submit button. Answers submitted will be taken for score   calculation
