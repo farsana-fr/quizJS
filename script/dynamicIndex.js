@@ -250,13 +250,13 @@ if (btnSubmit) {
     secWelcome.textContent = "";
     secQuiz.classList.remove("hidden");
     secQuiz.innerHTML = constrQuiz();
-    timer.classList.remove('hidden');
+    timer.classList.remove("hidden");
     //23-Jan-2023 : Add Timer Starts
     // let quizAllowedTime=10*60*1000;
     let sec = 0;
-    let min = 5;
-    let remaining='';
-    let tim=setInterval(
+    let min = 3;
+    let remaining = "";
+    let tim = setInterval(
       () =>
         // timer.textContent;
         {
@@ -269,18 +269,15 @@ if (btnSubmit) {
             document
               .querySelectorAll(`.submitAns`)
               .forEach((e) => e.classList.add("disabled"));
-              timer.innerHTML=`<h4 class="text-center p-1">TIMED OUT!!</h4>`;
-              timer.classList.add('hidden');
-              clearInterval(tim);
-              
+            timer.innerHTML = `<h4 class="text-center p-1">TIMED OUT!!</h4>`;
+            timer.classList.add("hidden");
+            clearInterval(tim);
           } else if (sec == 0) {
             min--;
             sec = 60;
-          }
-          else 
-          {
-            remaining=`${min}`.padStart(2,0)+`:${sec--}`.padStart(2,0);
-            timer.innerHTML=`<h4 class="text-center p-1">TIME LEFT: ${remaining}</h4>`
+          } else {
+            remaining = `${min}`.padStart(2, 0) + `:${sec--}`.padStart(2, 0);
+            timer.innerHTML = `<h4 class="text-center p-1">TIME LEFT: ${remaining}</h4>`;
             // timer.textContent=remaining;
             // console.log("remaining",remaining);
           }
@@ -294,7 +291,7 @@ if (btnSubmit) {
       document
         .querySelector(".btnFinish")
         .addEventListener("click", function () {
-          timer.classList.add('hidden');
+          timer.classList.add("hidden");
           secQuiz.innerHTML = `
       <div class=" mt-5">
           <h3>You have scored</h3>
